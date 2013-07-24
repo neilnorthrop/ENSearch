@@ -1,4 +1,7 @@
 EchoNest::Application.routes.draw do
+  get "pages/home"
+  get "pages/help"
+  get "pages/about_us"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -39,7 +42,7 @@ EchoNest::Application.routes.draw do
   #       get 'recent', on: :collection
   #     end
   #   end
-  
+
   # Example resource route with concerns:
   #   concern :toggleable do
   #     post 'toggle'
