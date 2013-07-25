@@ -1,4 +1,4 @@
-<div class="center hero-unit">
+<div class="center hero-unit fluid">
   <h1>
     EchoNest Search
   </h1>
@@ -7,5 +7,9 @@
     A search engine for your music.
   </h2>
 
-  <%= link_to "Search", "#", class: "btn btn-large btn-primary" %>
+
+ <%= form_tag search_path do %>
+    <%= text_field_tag "en_search_field", "Artist or Song", :class => "search-query", :required => true %>
+    <%= submit_tag "Submit", :class => "btn btn-primary" %>
+  <% end %>
 </div>
