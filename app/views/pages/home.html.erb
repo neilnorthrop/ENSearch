@@ -9,7 +9,7 @@
 
 
  <%= form_tag search_path do %>
-    <%= text_field_tag "en_search_field", "Artist or Song", :class => "search-query", :required => true %>
+    <%= search_field "en_search_field","artist_or_song", :class => "search-query", :required => true %>
     <%= submit_tag "Submit", :class => "btn btn-primary" %>
   <% end %>
 </div>
