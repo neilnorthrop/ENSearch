@@ -1,5 +1,6 @@
 ENSearch
 ==================
+[![Code Climate](https://codeclimate.com/github/neilnorthrop/ENSearch.png)](https://codeclimate.com/github/neilnorthrop/ENSearch)
 
 My adventure with Johann parsing the Echo Nest API. We've battled hash after hash, but we did it.
 
