@@ -10,6 +10,27 @@ list = %w[artist songs catalog playlist]
 result_num = %w[0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20]
 
 search_criteria = %w[search upload news terms hotttnesss id similar list status static biographies blogs]
+ARTIST
+  -Biographies
+    JSON.parse(open("http://developer.echonest.com/api/v4/artist/biographies?api_key=ECHO_API&name=radiohead").read)["response"]["biographies"]
+  -Blogs
+    JSON.parse(open("http://developer.echonest.com/api/v4/artist/blogs?api_key=ECHO_API&name=radiohead").read)
+  -News
+    JSON.parse(open("http://developer.echonest.com/api/v4/artist/news?api_key=ECHO_API&name=radiohead").read)
+  -Reviews
+    JSON.parse(open("http://developer.echonest.com/api/v4/artist/reviews?api_key=ECHO_API&name=radiohead").read)
+  -Song Hotttnesss
+    JSON.parse(open("http://developer.echonest.com/api/v4/artist/songs?api_key=ECHO_API&name=radiohead").read)
+  -Suggest
+    JSON.parse(open("http://developer.echonest.com/api/v4/artist/suggest?api_key=ECHO_API&name=rad").read)
+  -Twitter(return twitter handle)
+    JSON.parse(open("http://developer.echonest.com/api/v4/artist/twitter?api_key=ECHO_API&name=radiohead").read)
+  -Urls to Offical site
+    JSON.parse(open("http://developer.echonest.com/api/v4/artist/urls?api_key=ECHO_API&name=radiohead").read)
+
+SONG
+  -Search
+    JSON.parse(open("http://developer.echonest.com/api/v4/song/search?api_key=ECHO_API&artist=radiohead&title=karma%20police").read)
 
 result = JSON.parse(open("http://developer.echonest.com/api/v4/artist/news?api_key=ECHO_API&name=redhotchilipeppers&results=10&start=0").read)
 result = JSON.parse(open("http://developer.echonest.com/api/v4/#{list[0]}/#{search_criteria[2]}?api_key=ECHO_API&name=#{artist_1}&results=#{result_num[6]}&start=0").read)

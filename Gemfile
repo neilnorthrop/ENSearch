@@ -7,6 +7,9 @@ gem 'newrelic_rpm'
 gem 'json'
 gem 'httparty'
 gem 'jazz_hands'
+gem 'figaro'
+gem 'ruby-echonest'
+gem 'airbrake'
 
 # Use sqlite3 as the database for Active Record
 group :development do

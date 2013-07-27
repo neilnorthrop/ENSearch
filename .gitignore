@@ -18,5 +18,7 @@ api_key.rb
 
 # Ignore application configuration
 /config/application.yml
-config/.DS_Store
-.DS_Store
+/config/.DS_Store
+/.DS_Store
+/config/local_env.rb
+/config/airbrake.rb
