@@ -7,9 +7,19 @@
     A search engine for your music.
   </h2>
 
+  <div clas="row-fluid search-query">
+    <%= form_tag search_path do %>
+      <%= search_field "en_search_field","artist_or_song", :class => "search-query", :required => true %>
+      <%= submit_tag "Submit", :class => "btn btn-primary" %>
+    <% end %>
+  </div>
+  <div class="row-fluid form-search">
+    <%= form_for search_path do %>
+      <%= radio_button_tag(:artist, "artist", :class => "radio") %>
+      <%= label_tag('Artist') %>
+      <%= radio_button_tag(:song, "song") %>
+      <%= label_tag('Song') %>
+    <% end %>
+  </div>
 
- <%= form_tag search_path do %>
-    <%= search_field "en_search_field","artist_or_song", :class => "search-query", :required => true %>
-    <%= submit_tag "Submit", :class => "btn btn-primary" %>
-  <% end %>
 </div>

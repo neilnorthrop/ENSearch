@@ -1,5 +1,8 @@
-$(document).ready(function() {
-  $('Submit').click(function() {
-    console.log('IT WORKED');
+$(function() {
+  $('#artist-artist').click(function() {
+    $('#song-song').toggleClass('.radio');
+  });
+  $('#song-song').click(function() {
+    $('#artist-artist').toggleClass('.radio');
   });
 });
