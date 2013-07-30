@@ -10,6 +10,7 @@ gem 'jazz_hands'
 gem 'figaro'
 gem 'ruby-echonest'
 gem 'airbrake'
+gem 'haml'
 
 # Use sqlite3 as the database for Active Record
 group :development do

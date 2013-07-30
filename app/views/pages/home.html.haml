@@ -1,0 +1,10 @@
+.center.hero-unit.fluid
+
+  %h1  EchoNest Search
+
+  %h2  A search engine for your music.
+
+  .row-fluid.search-query
+    = form_tag(search_path) do
+      = search_field "","en_search_field", :class => "search-query", :placeholder => "Enter Artist or Song"
+      = submit_tag "Submit", :class => "btn btn-primary"

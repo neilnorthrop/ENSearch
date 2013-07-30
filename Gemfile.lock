@@ -66,6 +66,8 @@ GEM
       diff-lcs (~> 1.1)
       mime-types (~> 1.15)
       posix-spawn (~> 0.3.6)
+    haml (4.0.3)
+      tilt
     hashie (2.0.5)
     hike (1.2.3)
     hirb (0.7.1)
@@ -198,6 +200,7 @@ DEPENDENCIES
   bootstrap-sass
   coffee-rails (= 4.0.0)
   figaro
+  haml
   httparty
   jazz_hands
   jbuilder (= 1.0.2)

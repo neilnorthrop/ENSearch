@@ -1,0 +1,11 @@
+.center.hero-unit.fluid
+
+  %h1 Search#search
+
+  %p Find me in app/views/search/search.html.erb
+
+  %p
+  = @submit_parse_fetch.each_index do |file|
+    = @submit_parse_fetch[file].each do |index|
+      = index.each do |value|
+        %p= form_tag(value)
