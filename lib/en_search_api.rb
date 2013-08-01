@@ -44,12 +44,12 @@ class ENApiFetch
   end
 end
 
-class XMLParse
+class JSONParse
   attr_accessor :url, :date_found
 
-  def initialize(xml)
+  def initialize(json)
     @url = []
-    @url << xml["response"]["news"].map { |term| term }
+    @url << json["response"]["news"].map { |term| term }
     return @url
   end
 end
