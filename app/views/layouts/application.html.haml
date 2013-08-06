@@ -2,19 +2,19 @@
 
 %html
 
-%head
+  %head
+    = include_gon
+    %title EchoNest
+    = stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true
+    = javascript_include_tag "application", "data-turbolinks-track" => true
+    = csrf_meta_tags
+    = render 'layouts/shim'
 
-  %title EchoNest
-  = stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true
-  = javascript_include_tag "application", "data-turbolinks-track" => true
-  = csrf_meta_tags
-  = render 'layouts/shim'
+    %body
 
-  %body
+      = render 'layouts/header'
 
-    = render 'layouts/header'
+      .container.fluid
 
-    .container.fluid
-
-      = yield
-      = render 'layouts/footer'
+        = yield
+        = render 'layouts/footer'
