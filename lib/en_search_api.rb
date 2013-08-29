@@ -58,15 +58,15 @@ class ENSearchApi
   def initialize
   end
 
-  def submit(query)
+  def self.submit(query)
     ENApiFetch.new(query).submit_response
   end
 
-  def submit_parse_url(result)
+  def self.submit_parse_url(result)
     XMLParse.new(result).url
   end
 
-  def submit_parse_date_found(result)
+  def self.submit_parse_date_found(result)
     XMLParse.new(result).date_found
   end
 

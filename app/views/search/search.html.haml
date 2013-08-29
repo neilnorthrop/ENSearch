@@ -1,12 +1,12 @@
 .center.hero-unit.fluid
 
-  %h1 Search#search
+  %h1 Search Results
 
-  %p Find me in app/views/search/search.html.erb
+  %p Here's what we found.
 
   %p
 
-  = @submit_parse_fetch.each_index do |file|
-    = @submit_parse_fetch[file].each do |index|
-      = index.each do |value|
-        %p= form_tag(value)
+  %ul.search
+    %li{ "ng-repeat" => "search in searches" }
+      %a{"href" => "{{search.url}}"} {{search.name}}
+      %p {{search.summary}}

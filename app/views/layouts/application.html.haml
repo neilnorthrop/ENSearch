@@ -1,6 +1,6 @@
 !!! html
 
-%html
+%html{ "ng-app" => "ENSearch" }
 
   %head
     = include_gon
@@ -10,7 +10,7 @@
     = csrf_meta_tags
     = render 'layouts/shim'
 
-    %body
+    %body{ "ng-controller" => "ENSearchCtrl" }
 
       = render 'layouts/header'
 

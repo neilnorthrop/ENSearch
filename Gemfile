@@ -14,6 +14,7 @@ gem 'airbrake'
 gem 'haml'
 gem "active_model_serializers"
 gem 'gon'
+gem 'angular-gem'
 
 # Use sqlite3 as the database for Active Record
 group :development do

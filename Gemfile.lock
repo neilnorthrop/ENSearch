@@ -31,6 +31,9 @@ GEM
       activesupport
       builder
       json
+    angular-gem (1.1.5)
+      coffee-script (~> 2.2.0)
+      railties (>= 3.1)
     arel (4.0.0)
     atomic (1.1.10)
     awesome_print (1.1.0)
@@ -203,6 +206,7 @@ PLATFORMS
 DEPENDENCIES
   active_model_serializers
   airbrake
+  angular-gem
   bootstrap-sass
   coffee-rails (= 4.0.0)
   figaro

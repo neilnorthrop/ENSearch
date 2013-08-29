@@ -5,3 +5,7 @@ app.config([
     $httpProvider.defaults.headers.common['X_CSRF_Token'] = $('meta[name=csrf-token').attr('content');
   }
 ]);
+
+function ENSearchCtrl($scope) {
+  $scope.searches = gon.submit_fetch;
+}
