@@ -9,9 +9,7 @@
       = search_field "", "en_search_field", :class => "search-query", :placeholder => "Enter Artist or Song"
       = submit_tag "Submit", :class => "btn btn-primary"
       %p.options
-        = radio_button_tag "options", "internal"
+        = radio_button_tag "artist", "search_by_artist"
         Artist
-        = radio_button_tag "options", "internal"
+        = radio_button_tag "song", "search_by_song"
         Song
-        = radio_button_tag "options", "internal"
-        Music

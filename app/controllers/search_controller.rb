@@ -1,13 +1,21 @@
 class SearchController < ApplicationController
-  attr_accessor :submit_parse_fetch
+  attr_accessor :submit_parse_fetch, :result_fetch
 
   def search
-    begin
-      @result_fetch = ENApiFetch.new(params[:en_search_field]).submit_response
-      @submit_parse_fetch = JSONParse.new(@result_fetch).url[0]
-      gon.submit_fetch = @submit_parse_fetch
-    rescue ENSearchUrlError => e
-      redirect_to :root, :flash => { :error => 'Invalid URL' }
+    if params[:artist]
+      begin
+        gon.submit_fetch = ENAPIFetch.artist_search(params[:en_search_field])
+        # @submit_parse_fetch = @result_fetch
+        # gon.submit_fetch = @submit_parse_fetch
+      rescue ENSearchUrlError => e
+        redirect_to :root, :flash => { :error => 'Invalid URL' }
+      end
+    elsif params[:song]
+      begin
+        @result_fetch = ENApiFetch.new(params[:song]).submit_response
+      rescue ENSearchUrlError => e
+        redirect_to :root, :flash => { :error => 'Invalid URL' }
+      end
     end
   end
 end
