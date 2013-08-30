@@ -22,3 +22,4 @@ api_key.rb
 /.DS_Store
 /config/local_env.rb
 /config/airbrake.rb
+/search_list.txt
