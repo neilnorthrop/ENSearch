@@ -4,10 +4,15 @@
 
   %p Here's what we found.
 
+  %ul.search_list
+    %li{ "ng-repeat" => "search in searches" }
+      %a{"href" => "#" + "{{$index}}"} {{search.site}} {{search.title}} by {{search.artist_name}}
+
   %p
+  %br
 
   %ul.search
     %li{ "ng-repeat" => "search in searches" }
-      %a{"href" => "{{search.url}}", "target" => "_blank"} {{search.url}}
+      %a{"href" => "{{search.url}}", "target" => "_blank", "id" => "{{$index}}"} {{search.url}}
       %p From: {{search.site}}
       %p {{search.text}}
