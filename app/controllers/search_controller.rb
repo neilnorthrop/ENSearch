@@ -4,7 +4,7 @@ class SearchController < ApplicationController
   def search
     if params[:artist]
       begin
-        gon.submit_fetch = ENAPIFetch.artist_search(params[:en_search_field])
+        gon.submit_fetch = ENAPIFetch.artist_search(params[:en_search_field])["response"]["biographies"]
         # @submit_parse_fetch = @result_fetch
         # gon.submit_fetch = @submit_parse_fetch
       rescue ENSearchUrlError => e

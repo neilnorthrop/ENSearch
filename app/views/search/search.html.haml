@@ -8,5 +8,6 @@
 
   %ul.search
     %li{ "ng-repeat" => "search in searches" }
-      %a{"href" => "{{search.url}}"} {{search.url}}
+      %a{"href" => "{{search.url}}", "target" => "_blank"} {{search.url}}
+      %p From: {{search.site}}
       %p {{search.text}}

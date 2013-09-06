@@ -5,9 +5,10 @@ class ENSearchUrlError < Exception; end
 
 class ENAPIFetch
   attr_accessor :submit_response
+
   def self.artist_search(query)
     @search_query = query_constructor(query)
-    @submit_response = JSON.parse(open("http://developer.echonest.com/api/v4/artist/biographies?api_key=#{ENV["ECHO_API"]}&name=#{@search_query}").read)#["response"]["biographies"]
+    JSON.parse(open("http://developer.echonest.com/api/v4/artist/biographies?api_key=#{ENV["ECHO_API"]}&name=#{@search_query}").read)
     # Firebase.base_uri = "https://neilnorthrop.firebaseio.com/"
     # Firebase.push('', @submit_response )
   end
@@ -15,6 +16,7 @@ class ENAPIFetch
   def self.query_constructor(query)
     query.gsub(/\s+/, "")
   end
+
 end
 # class ENApiFetch
 #   attr_accessor :submit_response
