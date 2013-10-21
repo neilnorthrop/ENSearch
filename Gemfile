@@ -12,7 +12,7 @@ gem 'figaro'
 gem 'ruby-echonest'
 gem 'airbrake'
 gem 'haml'
-gem "active_model_serializers"
+gem 'active_model_serializers'
 gem 'gon'
 gem 'angular-gem'
 gem 'firebase'
@@ -38,7 +38,7 @@ end
 
 group :production do
   gem 'pg', '0.15.1'
-  gem 'rails_12factor', '0.0.2'
+  gem 'rails_12factor'
 end
 
 # Use ActiveModel has_secure_password
