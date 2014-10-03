@@ -17,6 +17,7 @@ api_key.rb
 /tmp
 
 # Ignore application configuration
+/config/initializers/secret_token.rb
 /config/application.yml
 /config/.DS_Store
 /.DS_Store

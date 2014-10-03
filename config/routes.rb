@@ -4,7 +4,6 @@ EchoNest::Application.routes.draw do
   match '/about_us', to: 'pages#about_us', via: 'get'
   match '/contact',  to: 'pages#contact',  via: 'get'
   # match '/search',   to: 'search#search',  via: 'get'
-  match '/search',   to: 'search#search',  via: 'get'
   match '/search',   to: 'search#search',  via: 'post'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -8,12 +8,12 @@ class ENAPIFetch
 
   def self.artist_search(query)
     @search_query = query_constructor(query)
-    JSON.parse(open("http://developer.echonest.com/api/v4/artist/biographies?api_key=#{ENV["ECHO_API"]}&name=#{@search_query}").read)
+    JSON.parse(open("http://developer.echonest.com/api/v4/artist/biographies?api_key=#{ENV['ECHO_API'].gsub("export", "")}&name=#{@search_query}").read)
   end
 
   def self.song_search(query)
     @search_query = song_query_constructor(query)
-    JSON.parse(open("http://developer.echonest.com/api/v4/song/search?api_key=#{ENV["ECHO_API"]}&results=50&title=#{@search_query}").read)
+    JSON.parse(open("http://developer.echonest.com/api/v4/song/search?api_key=#{ENV['ECHO_API'].gsub("export", "")}&results=50&title=#{@search_query}").read)
   end
 
   def self.query_constructor(query)
