@@ -77,5 +77,23 @@ EchoNest::Application.configure do
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
+
+
+  #####################################################################################
+  # BELOW WILL FILL UP YOUR PRODUCTION LOGS FAST!
+  #####################################################################################
   config.logger = Logger.new(STDOUT)
 end
+
+
+
+
+
+
+
+
+
+
+
+
+
