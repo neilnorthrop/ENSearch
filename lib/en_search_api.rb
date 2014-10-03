@@ -8,10 +8,10 @@ class ENAPIFetch
 
   def self.artist_search(query)
     @search_query = query_constructor(query)
-    logger.info "\n\n"
-    logger.info "******************************************************************"
-    logger.info "HERE IS THE SEARCH QUERY CLEANED UP: #{@search_query}"
-    logger.info "******************************************************************"
+    puts "\n\n"
+    puts "******************************************************************"
+    puts "HERE IS THE SEARCH QUERY CLEANED UP: #{@search_query}"
+    puts "******************************************************************"
     JSON.parse(open("http://developer.echonest.com/api/v4/artist/biographies?api_key=#{ENV['ECHO_API'].gsub("export", "")}&name=#{@search_query}").read)
   end
 
